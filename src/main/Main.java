@@ -98,7 +98,8 @@ public class Main {
 			Float low = symbol.getLow();
 			Short dir = symbol.getDirectory();
 			
-			rowOfData[counter] = new RowOfData(name, ask.toString(), bid.toString(), high.toString(), low.toString(), dir.toString());
+			rowOfData[counter] = new RowOfData(name, ask.toString(), bid.toString(),
+					high.toString(), low.toString(), dir.toString());
 			++counter;
 		}
 		return rowOfData; 
@@ -112,9 +113,7 @@ class RowOfData extends JPanel {
 	public GridLayout layout = new GridLayout(1,6);
 	public ArrayList<Component> components;
 	
-	public RowOfData(String name, String ask, String bid, String high, String low, String dir) {
-		System.out.println(name + " ask: " + ask + " bid: " + bid + " high: " + high + " low: " + low + " directory: " + dir);
-		
+	public RowOfData(String name, String ask, String bid, String high, String low, String dir) {	
 		this.setBackground(Color.darkGray);
 		
 		this.name = new JLabel(name);
